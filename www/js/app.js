@@ -82,8 +82,78 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
   };
 });
 
+var devKey ="e73af7a07f5347dda1f4779eca3ae604";
+var bearer= "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ilg1ZVhrNHh5b2pORnVtMWtsMll0djhkbE5QNC1jNTdkTzZRR1RWQndhTmsifQ.eyJleHAiOjE1MjM3NTE3OTYsIm5iZiI6MTUyMzc0ODE5NiwidmVyIjoiMS4wIiwiaXNzIjoiaHR0cHM6Ly9sb2dpbi5taWNyb3NvZnRvbmxpbmUuY29tL2Q1Zjg1NjgyLWY2N2EtNDQ0NC05MzY5LTJjNWVjMWEwZThjZC92Mi4wLyIsInN1YiI6IjQ5MTcyMjgzLWNhOTUtNGYxYy04YmI1LWY3YTI1ZDQ2MDZlYyIsImF1ZCI6IjQwOTU3YjljLTYzYmMtNGFiNC05ZWNiLTY3YjU0M2M4ZTRjYSIsIm5vbmNlIjoiZGVmYXVsdE5vbmNlIiwiaWF0IjoxNTIzNzQ4MTk2LCJhdXRoX3RpbWUiOjE1MjM3NDgxOTYsIm9pZCI6IjQ5MTcyMjgzLWNhOTUtNGYxYy04YmI1LWY3YTI1ZDQ2MDZlYyIsIm5hbWUiOiJ0cmF5bm9yczIyIiwiZmFtaWx5X25hbWUiOiJUcmF5bm9yIiwiZ2l2ZW5fbmFtZSI6IlN0ZXBoZW4iLCJlbWFpbHMiOlsidHJheW5vcnMyMkBnbWFpbC5jb20iXSwidGZwIjoiQjJDXzFfQmx1ZUJhbmtTVVNJIn0.o924rk-VBk6DjIEQAoN_ghAMRLu7gYvWalvFD1VIV6A-ywAJwVaBZffdz000sbDviJ9imXE6zbh1kTv9_9iIuUZDNpJRcqxtfWLmUrGIA0g5MswQdvXt1KiWJJtOWesfIVsx4o4ECLqTydt1_v5PDDTsDYecYs-MebrEKeRqFNAoLmliVCPXPH9wTbS-UB-8m9E9qqZ8J_MZN-QyxYFR4fx8XxFtOtgwyKhJJPo9HFPgEIBsScQ2twgwOK7mjoeylCwPTZsdcpeB_WNovLX1jYPjnmbBC1BwOgrgReRqPaeWP-x0Iz2V5Kss_aZZYrJ1jolZxEmD3PxybEuNFolyeA"
+var url1 = "https://bluebank.azure-api.net/api/v0.7/";
+var accountID = "0361d0ec-959f-4ce3-970c-a05a77a2609c";
+var customerID = "49172283-ca95-4f1c-8bb5-f7a25d4606ec";
+//var urlGetAccountDetails = "https://bluebank.azure-api.net/api/v0.7/accounts/0361d0ec-959f-4ce3-970c-a05a77a2609c";
+//var urlGetTransations ="https://bluebank.azure-api.net/api/v0.7/accounts/0361d0ec-959f-4ce3-970c-a05a77a2609c/transactions";
+var urlGetAccountDetails = url1+"accounts/"+accountID;
+var urlGetTransations =url1+"accounts/"+accountID+"/transactions";
+var urlGetCustomer = url1+"customers";
+//var urlGetCustomer = "https://bluebank.azure-api.net/api/v0.7/customers";
+var urlGetCustomerID = urlGetCustomer+"/"+customerID;
+var urlGetAllAccounts= urlGetCustomerID +"/accounts";
+
+
 
 function showMyOffer() {
-    console.log('#someButton was clicked');
+     getAccountDetails(urlGetAccountDetails); 
+     getCustomerDetails(urlGetCustomerID);        
 }
 
+function getAccountDetails(url) {
+              
+
+$.ajax({
+              url: url,beforeSend: function(xhrObj){
+                    xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key",devKey);
+                    xhrObj.setRequestHeader("Authorization",bearer);
+                        },
+                        type: "GET",
+                        })
+                         .done(function(data) {
+                          console.log('get request on bluebank API'); 
+                                                //Got a customers response
+                                                //var customerId=data.id;
+                                                var currency="";
+                                                if( data.accountCurrency=="GBP"){
+                                                currency="£";
+                                                }else if( data.accountCurrency=="USD"){
+                                                currency="$";
+                                                }else if( data.accountCurrency=="EUR"){
+                                                currency="€";
+                                                }else{
+                                                currency="£"
+                                                }
+                                               
+                                                console.log("Your %s balance is: %s%s", data.accountFriendlyName ,currency ,data.accountBalance);
+
+
+
+
+                                                })
+}
+
+function getCustomerDetails(url) {
+              
+
+$.ajax({
+              url: url,beforeSend: function(xhrObj){
+                    xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key",devKey);
+                    xhrObj.setRequestHeader("Authorization",bearer);
+                        },
+                        type: "GET",
+                        })
+                         .done(function(data) {
+                          console.log('get customer details via bluebank API'); 
+                                                
+                                               
+                                                console.log("Your address is: %s , %s , %s", data.address1 ,data.county ,data.postCode);
+
+
+
+
+                                                })
+}
