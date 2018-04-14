@@ -1,3 +1,141 @@
 <ion-view title="myHome" id="page5">
-  <ion-content padding="true" class="has-header"></ion-content>
+  <ion-content padding="true" class="has-header">
+  	<script src="js/Chart.bundle.js"></script>
+	<script src="js/utils.js"></script>
+	<style>
+	canvas{
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+	}
+	</style>
+</head>
+
+<body>
+
+	<div style="width:95%; height:500px;">
+		<canvas id="canvas"></canvas>
+	</div>
+	
+	
+	<script>
+
+		
+		var config = {
+			type: 'line',
+			data: {
+				labels: [
+					
+					"Apr 2016",
+"May 2016",
+"Jun 2016",
+"Jul 2016",
+"Aug 2016",
+"Sep 2016",
+"Oct 2016",
+"Nov 2016",
+"Dec 2016",
+"Jan 2017",
+"Feb 2017",
+"Mar 2017",
+"Apr 2017",
+"May 2017",
+"Jun 2017",
+"Jul 2017",
+"Aug 2017",
+"Sep 2017",
+"Oct 2017",
+"Nov 2017",
+"Dec 2017",
+"Jan 2018",
+"Feb 2018",
+"Mar 2018",
+
+				],
+				datasets: [{
+					label: 'Property Valuation',
+					backgroundColor: window.chartColors.green,
+					borderColor: window.chartColors.green,
+					data: [
+
+						 500000, 501298, 509557, 505341, 517011, 515040, 518637, 520997, 521524, 538082, 532351, 531284, 533041, 545799, 544069, 548068, 560347, 553680, 553978, 570438, 562997, 572568, 567439, 571525,
+					],
+					fill: false,
+				}, {
+					label: 'Outstanding Balance',
+					fill: false,
+					backgroundColor: window.chartColors.blue,
+					borderColor: window.chartColors.blue,
+					data: [
+						
+						 500000, 498432, 496864, 495296, 493728, 492160, 490592, 489023, 487455, 485887, 484319, 482751, 481183, 479570, 477956, 476343, 474729, 473116, 471503, 469889, 468276, 466662, 465049, 463435, 461822, 460162, 458502, 456842, 455182, 453522, 451862, 450202, 448542, 446882, 445222, 443562, 441902, 440194, 438486, 436778, 435070, 433362, 431654, 429946, 428238, 426530, 424822, 423114, 421406, 419649, 417891, 416134, 414377, 412619, 410862, 409105, 407347, 405590, 403833, 402075, 400318, 398510, 396702, 394894, 393085, 391277, 389469, 387661, 385853, 384045, 382236, 380428, 378620, 376760, 374899, 373039, 371178, 369318, 367458, 365597, 363737, 361876, 360016, 358155, 356295, 354381, 352467, 350553, 348638, 346724, 344810, 342896, 340982, 339068, 337153, 335239, 333325, 331356, 329386, 327417, 325447, 323478, 321508, 319539, 317569, 315600, 313630, 311661, 309691, 307665, 305638, 303612, 301585, 299559, 297533, 295506, 293480, 291453, 289427, 287400, 285374, 283289, 281204, 279119, 277034, 274949, 272865, 270780, 268695, 266610, 264525, 262440, 260355, 258210, 256065, 253919, 251774, 249629, 247484, 245338, 243193, 241048, 238903, 236757, 234612, 232405, 230198, 227990, 225783, 223576, 221369, 219161, 216954, 214747, 212540, 210332, 208125, 205854, 203583, 201312, 199041, 196770, 194499, 192228, 189957, 187686, 185415, 183144, 180873, 178536, 176200, 173863, 171526, 169190, 166853, 164516, 162180, 159843, 157506, 155170, 152833, 150429, 148025, 145621, 143216, 140812, 138408, 136004, 133600, 131196, 128791, 126387, 123983, 121509, 119036, 116562, 114088, 111615, 109141, 106667, 104194, 101720, 99246, 96773, 94299, 91754, 89209, 86664, 84119, 81574, 79029, 76483, 73938, 71393, 68848, 66303, 63758, 61139, 58521, 55902, 53283, 50664, 48046, 45427, 42808, 40189, 37571, 34952, 32333, 29639, 26944, 24250, 21555, 18861, 16167, 13472, 10778, 8083, 5389, 2694, 0,	
+					],
+				}]
+			},
+			options: {
+				responsive: true,
+				maintainAspectRatio: false,
+				title: {
+					display: true,
+					text: ''
+				},
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+				hover: {
+					mode: 'nearest',
+					intersect: true
+				},
+				layout: {
+			        padding: {
+			            left: 0,
+			            right: 0,
+			            top: 0,
+			            bottom: 0
+			        }
+			    },
+			    legend: {
+				    position: 'bottom'
+				  },
+				scales: {
+					xAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: ''
+						}
+					}],
+					yAxes: [
+			            {
+				            display: true,
+			                ticks: {
+			                    callback: function(label, index, labels) {
+			                        return label/1000+'k';
+			                    },
+				                beginAtZero: false,
+				                max: 600000,
+				                min: 400000            
+			                },
+			                scaleLabel: {
+			                    display: true,
+			                    labelString: 'Value'
+			                }
+			            }
+			        ]
+				}
+			}
+		};
+
+		window.onload = function() {
+			var ctx = document.getElementById('canvas').getContext('2d');
+			window.myLine = new Chart(ctx, config);
+		};
+
+
+	</script>
+</body>
+
+
+  </ion-content>
 </ion-view>
