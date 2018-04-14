@@ -1,3 +1,43 @@
+
+<style>
+.slidecontainer {
+    width: 100%;
+
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+</style>
 <ion-view title="Ulster Banks Offer" id="page6">
   <ion-content padding="true" class="has-header">
       <div id="more-markdown2" style="padding-top: 10px; padding-bottom: 10px;"class="show-list-numbers-and-dots">
@@ -25,26 +65,87 @@
       <div id="ulsterBanksOffer-markdown6" class="show-list-numbers-and-dots">
         <p style="color:#000000; text-align: center;">How much have you go left <br> on your mortgage? </p>
       </div>
+<div style="padding-left: 15px;">
+<form id="more-form" class="list">
+  <ion-item class="range range-positive" id="more-range3">Loan Value
+        <input type="range" value="400000" min="0" max="500000" step="1000">
+      </ion-item>
+ </form>
+
+</div>
+ 
+
+
       <div id="ulsterBanksOffer-markdown5" class="show-list-numbers-and-dots">
         <p style="color:#000000;text-align: center;">How long do you want the <br>term of your mortgage to last for?</p>
-         <ion-list>
-  <ion-item>
-    <ion-label>Gaming</ion-label>
-    <ion-select [(ngModel)]="gaming">
-      <ion-option value="nes">NES</ion-option>
-      <ion-option value="n64">Nintendo64</ion-option>
-      <ion-option value="ps">PlayStation</ion-option>
-      <ion-option value="genesis">Sega Genesis</ion-option>
-      <ion-option value="saturn">Sega Saturn</ion-option>
-      <ion-option value="snes">SNES</ion-option>
-    </ion-select>
-  </ion-item>
-</ion-list>
-      </div>
+ </div>
+
+
+  <!--<div >
+  <input  type="range" min="1" max="100" value="50">
+  </div>
+  <ion-list>
+    <ion-list-header>
+      Adjust Display
+    </ion-list-header>
+    <ion-item>
+      <ion-range [(ngModel)]="brightness">
+        <ion-icon range-left small name="sunny"></ion-icon>
+        <ion-icon range-right name="sunny"></ion-icon>
+      </ion-range>
+    </ion-item>
+    <ion-item>
+      <ion-range min="-200" max="200" pin="true" [(ngModel)]="contrast" color="secondary">
+        <ion-icon range-left small name="contrast"></ion-icon>
+        <ion-icon range-right name="contrast"></ion-icon>
+      </ion-range>
+    </ion-item>
+    <ion-item>
+      <ion-range dualKnobs="true" pin="true" [(ngModel)]="structure" color="dark">
+        <ion-icon range-left small name="brush"></ion-icon>
+        <ion-icon range-right name="brush"></ion-icon>
+      </ion-range>
+    </ion-item>
+    <ion-item>
+      <ion-range min="1000" max="2000" step="100" snaps="true" [(ngModel)]="warmth" color="danger">
+        <ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+        <ion-icon range-right color="danger" name="thermometer"></ion-icon>
+      </ion-range>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      Adjust Text
+    </ion-list-header>
+    <ion-item>
+      <ion-range min="-100" step="10" snaps="true" [(ngModel)]="text">
+        <ion-label range-left class="small-text">A</ion-label>
+        <ion-label range-right>A</ion-label>
+      </ion-range>
+    </ion-item>
+  </ion-list>-->
+
+
+
      
+     
+     <div style="padding-left: 15px;">
+     <form id="more-form" class="list">
+      <label class="item item-select" id="more-select2">
+        <span class="input-label">Term</span>
+        <select>
+          <option>2 yrs</option>
+          <option>3yrs</option>
+          <option>5yrs</option>
+        </select>
+      </label>
+    
+    </form>
+     </div>
     
 
-<div style="width: 300px; height: 100px;" id="ulsterBanksOffer-container2" class="creator-container">
+<div style="width: 300px; height: 50px;" id="ulsterBanksOffer-container2" class="creator-container">
 </div>
     <button id="ulsterBanksOffer-button8" class="button button-positive button-block button-block icon-right ion-android-arrow-forward" onclick="showMyOffer()">Get in touch with me</button>
   </ion-content>
