@@ -81,3 +81,9 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
     }
   };
 });
+
+
+function showMyOffer() {
+    console.log('#someButton was clicked');
+}
+
