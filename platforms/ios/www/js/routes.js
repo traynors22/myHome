@@ -29,6 +29,16 @@ angular.module('app.routes', [])
     }
   })
 
+  .state('tabsController.ulsterBanksOffer', {
+    url: '/page6',
+    views: {
+      'tab2': {
+        templateUrl: 'templates/ulsterBanksOffer.html',
+        controller: 'ulsterBanksOfferCtrl'
+      }
+    }
+  })
+
   .state('tabsController.myHome', {
     url: '/page5',
     views: {
