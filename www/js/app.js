@@ -83,7 +83,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
 });
 
 var devKey ="e73af7a07f5347dda1f4779eca3ae604";
-var bearer= "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ilg1ZVhrNHh5b2pORnVtMWtsMll0djhkbE5QNC1jNTdkTzZRR1RWQndhTmsifQ.eyJleHAiOjE1MjM3NTE3OTYsIm5iZiI6MTUyMzc0ODE5NiwidmVyIjoiMS4wIiwiaXNzIjoiaHR0cHM6Ly9sb2dpbi5taWNyb3NvZnRvbmxpbmUuY29tL2Q1Zjg1NjgyLWY2N2EtNDQ0NC05MzY5LTJjNWVjMWEwZThjZC92Mi4wLyIsInN1YiI6IjQ5MTcyMjgzLWNhOTUtNGYxYy04YmI1LWY3YTI1ZDQ2MDZlYyIsImF1ZCI6IjQwOTU3YjljLTYzYmMtNGFiNC05ZWNiLTY3YjU0M2M4ZTRjYSIsIm5vbmNlIjoiZGVmYXVsdE5vbmNlIiwiaWF0IjoxNTIzNzQ4MTk2LCJhdXRoX3RpbWUiOjE1MjM3NDgxOTYsIm9pZCI6IjQ5MTcyMjgzLWNhOTUtNGYxYy04YmI1LWY3YTI1ZDQ2MDZlYyIsIm5hbWUiOiJ0cmF5bm9yczIyIiwiZmFtaWx5X25hbWUiOiJUcmF5bm9yIiwiZ2l2ZW5fbmFtZSI6IlN0ZXBoZW4iLCJlbWFpbHMiOlsidHJheW5vcnMyMkBnbWFpbC5jb20iXSwidGZwIjoiQjJDXzFfQmx1ZUJhbmtTVVNJIn0.o924rk-VBk6DjIEQAoN_ghAMRLu7gYvWalvFD1VIV6A-ywAJwVaBZffdz000sbDviJ9imXE6zbh1kTv9_9iIuUZDNpJRcqxtfWLmUrGIA0g5MswQdvXt1KiWJJtOWesfIVsx4o4ECLqTydt1_v5PDDTsDYecYs-MebrEKeRqFNAoLmliVCPXPH9wTbS-UB-8m9E9qqZ8J_MZN-QyxYFR4fx8XxFtOtgwyKhJJPo9HFPgEIBsScQ2twgwOK7mjoeylCwPTZsdcpeB_WNovLX1jYPjnmbBC1BwOgrgReRqPaeWP-x0Iz2V5Kss_aZZYrJ1jolZxEmD3PxybEuNFolyeA"
+var bearer= "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ilg1ZVhrNHh5b2pORnVtMWtsMll0djhkbE5QNC1jNTdkTzZRR1RWQndhTmsifQ.eyJleHAiOjE1MjM3NTU2NTYsIm5iZiI6MTUyMzc1MjA1NiwidmVyIjoiMS4wIiwiaXNzIjoiaHR0cHM6Ly9sb2dpbi5taWNyb3NvZnRvbmxpbmUuY29tL2Q1Zjg1NjgyLWY2N2EtNDQ0NC05MzY5LTJjNWVjMWEwZThjZC92Mi4wLyIsInN1YiI6IjQ5MTcyMjgzLWNhOTUtNGYxYy04YmI1LWY3YTI1ZDQ2MDZlYyIsImF1ZCI6IjQwOTU3YjljLTYzYmMtNGFiNC05ZWNiLTY3YjU0M2M4ZTRjYSIsIm5vbmNlIjoiZGVmYXVsdE5vbmNlIiwiaWF0IjoxNTIzNzUyMDU2LCJhdXRoX3RpbWUiOjE1MjM3NTIwNTYsIm9pZCI6IjQ5MTcyMjgzLWNhOTUtNGYxYy04YmI1LWY3YTI1ZDQ2MDZlYyIsIm5hbWUiOiJ0cmF5bm9yczIyIiwiZmFtaWx5X25hbWUiOiJUcmF5bm9yIiwiZ2l2ZW5fbmFtZSI6IlN0ZXBoZW4iLCJlbWFpbHMiOlsidHJheW5vcnMyMkBnbWFpbC5jb20iXSwidGZwIjoiQjJDXzFfQmx1ZUJhbmtTVVNJIn0.ELCEvvwYt1meOXcZ9bKlo4M2D4UMPTCS6HSXEpa5P-Q6b8HGObRLStEU7bvI7nPgK7foMTlqcSpSyDGOuew8F0AEJXZPFwveUJhdP5RQedFQNYDpqK2beCn6Odlc1OCJyv81VOPLTsFbRbkBbJ3-L0blDdDItUentfVuXbTcRBK49QA920wbjhnf7z548wQn8V6diPcL-gqmytOJi2n1W5--lESW0tZy9GsnFEYDjuAsemck2Fvsb-JnrLdd1lIcCXO3PEkcOmXap1GiViPpPJcsJKIgzN8RukFBy-A8XDms69-R_7LqiiesHwftu8K8GONi14jNPY022tk8Nwd8kQ"
 var url1 = "https://bluebank.azure-api.net/api/v0.7/";
 var accountID = "0361d0ec-959f-4ce3-970c-a05a77a2609c";
 var customerID = "49172283-ca95-4f1c-8bb5-f7a25d4606ec";
@@ -102,8 +102,8 @@ var urlGetAllAccounts= urlGetCustomerID +"/accounts";
 function showMyOffer() {
     // getAccountDetails(urlGetAccountDetails); 
      //getCustomerDetails(urlGetCustomerID);  
-     //getTransactionDetails(); 
-     getAllAccounts();     
+     getTransactionDetails(); 
+     //getAllAccounts();     
 }
 
 function getAccountDetails(url) {
@@ -176,6 +176,12 @@ $.ajax({
              //Got an accounts/{id}/transactions response
               console.log("Most recent 20 transactions:");
  
+  var data = $.parseJSON(JSON.stringify(data));
+            console.log(data);
+                            $.each(data.results, function(i, post) {
+                                //content += '<li>' + post.post_title + '</li>';
+                                console.log("Transaction: "+post.transactionDescription);
+                            });
               //Dump out transactions to the console
               for (var key in data) {
                   if (data.hasOwnProperty(key)) {
@@ -183,6 +189,9 @@ $.ajax({
                     }
                     console.log("    %s    Amount=%s    Balance=%s",element.transactionDateTime,element.transactionAmount,element.accountBalance);
                       }
+
+
+
                       })
                       .fail(function(err) {
                        //Didn't get an accounts/{id}/transactions response
@@ -215,7 +224,7 @@ $.ajax({
                       })
                       .fail(function(err) {
                        //Didn't get an accounts/{id}/transactions response
-                        console.log("No response from GET /accounts/{id}/transactions");
+                        console.log("No response from GET customers/{id}/accounts");
                         console.dir(err);
                          });
 }
