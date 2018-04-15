@@ -98,9 +98,12 @@ var urlGetAllAccounts= urlGetCustomerID +"/accounts";
 
 
 
+
 function showMyOffer() {
-     getAccountDetails(urlGetAccountDetails); 
-     getCustomerDetails(urlGetCustomerID);        
+    // getAccountDetails(urlGetAccountDetails); 
+     //getCustomerDetails(urlGetCustomerID);  
+     //getTransactionDetails(); 
+     getAllAccounts();     
 }
 
 function getAccountDetails(url) {
@@ -157,3 +160,63 @@ $.ajax({
 
                                                 })
 }
+
+function getTransactionDetails(){
+
+$.ajax({
+  url: urlGetTransations+"?sortOrder=-transactionDateTime&limit=20",
+  beforeSend: function(xhrObj){
+                                                                                                                // Request headers
+    xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key",devKey);
+    xhrObj.setRequestHeader("Authorization",bearer);
+         },
+           type: "GET",
+            })
+            .done(function(data) {
+             //Got an accounts/{id}/transactions response
+              console.log("Most recent 20 transactions:");
+ 
+              //Dump out transactions to the console
+              for (var key in data) {
+                  if (data.hasOwnProperty(key)) {
+                    var element = data[key];
+                    }
+                    console.log("    %s    Amount=%s    Balance=%s",element.transactionDateTime,element.transactionAmount,element.accountBalance);
+                      }
+                      })
+                      .fail(function(err) {
+                       //Didn't get an accounts/{id}/transactions response
+                        console.log("No response from GET /accounts/{id}/transactions");
+                        console.dir(err);
+                         });
+}
+
+function getAllAccounts(){
+
+$.ajax({
+  url: urlGetAllAccounts,
+  beforeSend: function(xhrObj){
+                                                                                                                // Request headers
+    xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key",devKey);
+    xhrObj.setRequestHeader("Authorization",bearer);
+         },
+           type: "GET",
+            })
+            .done(function(data) {
+             //Got an accounts/{id}/transactions response
+              console.log("got all account details"+data.results);
+ 
+            var data = $.parseJSON(JSON.stringify(data));
+            console.log(data);
+                            $.each(data.results, function(i, post) {
+                                //content += '<li>' + post.post_title + '</li>';
+                                console.log("Account: "+post.accountFriendlyName);
+                            });
+                      })
+                      .fail(function(err) {
+                       //Didn't get an accounts/{id}/transactions response
+                        console.log("No response from GET /accounts/{id}/transactions");
+                        console.dir(err);
+                         });
+}
+
