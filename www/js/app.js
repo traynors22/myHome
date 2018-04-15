@@ -151,6 +151,7 @@ $.ajax({
                         })
                          .done(function(data) {
                           console.log('get customer details via bluebank API'); 
+                          $("#TestInput").append(data.address1);
                                                 
                                                
                                                 console.log("Your address is: %s , %s , %s", data.address1 ,data.county ,data.postCode);
@@ -183,12 +184,12 @@ $.ajax({
                                 console.log("Transaction: "+post.transactionDescription);
                             });
               //Dump out transactions to the console
-              for (var key in data) {
-                  if (data.hasOwnProperty(key)) {
-                    var element = data[key];
-                    }
-                    console.log("    %s    Amount=%s    Balance=%s",element.transactionDateTime,element.transactionAmount,element.accountBalance);
-                      }
+              //for (var key in data) {
+                  //if (data.hasOwnProperty(key)) {
+                    //var element = data[key];
+                    //}
+                    //console.log("    %s    Amount=%s    Balance=%s",element.transactionDateTime,element.transactionAmount,element.accountBalance);
+                      //}
 
 
 
