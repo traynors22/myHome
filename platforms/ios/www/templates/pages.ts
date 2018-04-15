@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
 @Component({
   templateUrl: 'ulsterBanksOffer.html'
 })
+
 export class BasicPage {
   brightness: number = 20;
   contrast: number = 0;

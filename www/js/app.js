@@ -105,7 +105,7 @@ var urlLocalTransactionData ="http://localhost:8080/api/getTransactionData";
 
 function callTransations() {
 getRemoteTransactionsAPI(urlLocalTransactionData);
-     getRemoteTransactionsAPI(urlRemoteTransactionData);
+     //getRemoteTransactionsAPI(urlRemoteTransactionData);
 }
 
 
@@ -117,9 +117,24 @@ function showMyOffer() {
      getRemoteCustomerAPI(urlLocalGetCustomer);  
      getRemoteAccountAPI(urlLocalGetAccount) ;
     
-     getRemoteCustomerAPI(urlRemoteGetCustomer);  
-     getRemoteAccountAPI(urlRemoteGetAccount) ;
-      
+     //getRemoteCustomerAPI(urlRemoteGetCustomer);  
+     //getRemoteAccountAPI(urlRemoteGetAccount) ;
+
+
+
+}
+
+function showAccount() {
+    // getAccountDetails(urlGetAccountDetails); 
+     //getCustomerDetails(urlGetCustomerID);  
+     //getTransactionDetails(); 
+     //getAllAccounts();   
+     getRemoteCustomerAPI(urlLocalGetCustomer);  
+     getRemoteAccountAPI(urlLocalGetAccount) ;
+    
+     //getRemoteCustomerAPI(urlRemoteGetCustomer);  
+     //getRemoteAccountAPI(urlRemoteGetAccount) ;
+
 
 
 }

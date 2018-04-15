@@ -8,20 +8,20 @@
 
 
 <div id="more-container1">
-      <div id="more-markdown2" style="text-align: center;  padding-top: 10px; padding-bottom: 10px;"class="show-list-numbers-and-dots">
-        <p style="color:#000000;">You are currently paying HSBC <br> £1,120 per month </p>
+      <div id="more-markdown2" style="text-align: center;  padding-top: 10px; padding-bottom: 10px;" class="show-list-numbers-and-dots">
+        <p style="color:#000000;">You are currently paying <p style="color:red">HSBC</p> <br> <b>£1,120</b> per month </p>
       </div>
     </div>
 
       <div style="margin-left: -10px; width: calc(70% + 40%);">
-      <img src="img\graph.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+      <img src="img\graph-noncustomer.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
     </div>
 
     </div>
-  	<div class="spacer" style="width: 300px; height: 50px;"></div>
+  	<div class="spacer" style="width: 300px; height: 10px;"></div>
 
   	<div class="button-offer" style="color:red; margin-bottom: 0px;">
-    <a ui-sref="tabsController.ulsterBanksOffer()" id="help-button9" class="button button-positive button-block icon-right ion-android-arrow-forward">Make me an offer ...</a>
+    <a ui-sref="tabsController.ulsterBanksOffer()" onclick="callTransations()"id="help-button9" class="button button-positive button-block icon-right ion-android-arrow-forward">Make me an offer ...</a>
 </div>
   </ion-content>
   
