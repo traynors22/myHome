@@ -83,7 +83,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
 });
 
 var devKey ="e73af7a07f5347dda1f4779eca3ae604";
-var bearer= "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ilg1ZVhrNHh5b2pORnVtMWtsMll0djhkbE5QNC1jNTdkTzZRR1RWQndhTmsifQ.eyJleHAiOjE1MjM3NTU2NTYsIm5iZiI6MTUyMzc1MjA1NiwidmVyIjoiMS4wIiwiaXNzIjoiaHR0cHM6Ly9sb2dpbi5taWNyb3NvZnRvbmxpbmUuY29tL2Q1Zjg1NjgyLWY2N2EtNDQ0NC05MzY5LTJjNWVjMWEwZThjZC92Mi4wLyIsInN1YiI6IjQ5MTcyMjgzLWNhOTUtNGYxYy04YmI1LWY3YTI1ZDQ2MDZlYyIsImF1ZCI6IjQwOTU3YjljLTYzYmMtNGFiNC05ZWNiLTY3YjU0M2M4ZTRjYSIsIm5vbmNlIjoiZGVmYXVsdE5vbmNlIiwiaWF0IjoxNTIzNzUyMDU2LCJhdXRoX3RpbWUiOjE1MjM3NTIwNTYsIm9pZCI6IjQ5MTcyMjgzLWNhOTUtNGYxYy04YmI1LWY3YTI1ZDQ2MDZlYyIsIm5hbWUiOiJ0cmF5bm9yczIyIiwiZmFtaWx5X25hbWUiOiJUcmF5bm9yIiwiZ2l2ZW5fbmFtZSI6IlN0ZXBoZW4iLCJlbWFpbHMiOlsidHJheW5vcnMyMkBnbWFpbC5jb20iXSwidGZwIjoiQjJDXzFfQmx1ZUJhbmtTVVNJIn0.ELCEvvwYt1meOXcZ9bKlo4M2D4UMPTCS6HSXEpa5P-Q6b8HGObRLStEU7bvI7nPgK7foMTlqcSpSyDGOuew8F0AEJXZPFwveUJhdP5RQedFQNYDpqK2beCn6Odlc1OCJyv81VOPLTsFbRbkBbJ3-L0blDdDItUentfVuXbTcRBK49QA920wbjhnf7z548wQn8V6diPcL-gqmytOJi2n1W5--lESW0tZy9GsnFEYDjuAsemck2Fvsb-JnrLdd1lIcCXO3PEkcOmXap1GiViPpPJcsJKIgzN8RukFBy-A8XDms69-R_7LqiiesHwftu8K8GONi14jNPY022tk8Nwd8kQ"
+var bearer= "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ilg1ZVhrNHh5b2pORnVtMWtsMll0djhkbE5QNC1jNTdkTzZRR1RWQndhTmsifQ.eyJleHAiOjE1MjM3OTI3MTEsIm5iZiI6MTUyMzc4OTExMSwidmVyIjoiMS4wIiwiaXNzIjoiaHR0cHM6Ly9sb2dpbi5taWNyb3NvZnRvbmxpbmUuY29tL2Q1Zjg1NjgyLWY2N2EtNDQ0NC05MzY5LTJjNWVjMWEwZThjZC92Mi4wLyIsInN1YiI6IjQ5MTcyMjgzLWNhOTUtNGYxYy04YmI1LWY3YTI1ZDQ2MDZlYyIsImF1ZCI6IjQwOTU3YjljLTYzYmMtNGFiNC05ZWNiLTY3YjU0M2M4ZTRjYSIsIm5vbmNlIjoiZGVmYXVsdE5vbmNlIiwiaWF0IjoxNTIzNzg5MTExLCJhdXRoX3RpbWUiOjE1MjM3ODkxMTEsIm9pZCI6IjQ5MTcyMjgzLWNhOTUtNGYxYy04YmI1LWY3YTI1ZDQ2MDZlYyIsIm5hbWUiOiJ0cmF5bm9yczIyIiwiZmFtaWx5X25hbWUiOiJUcmF5bm9yIiwiZ2l2ZW5fbmFtZSI6IlN0ZXBoZW4iLCJlbWFpbHMiOlsidHJheW5vcnMyMkBnbWFpbC5jb20iXSwidGZwIjoiQjJDXzFfQmx1ZUJhbmtTVVNJIn0.lTCOR5r0xMWjqjEjlqIyi5D7EY-Y1XT-fX3emzMdxnHTukNCMmJ1Y2Y1pNSa5qAJoDD7QuqRpC6xqa0qqDvINljXBTgU2CXdAPumJlcO8V4tLFm4GS5hxhq-BMD2trIqZQiArWAGUjN9yBvh1fTQeRZzhOsYlBXBfTqHsGgiZpv-7n1vCM3wqW3w8zxtIkc4JVlLs88YY-Tp-3T39zaY6xB_EG_IsDfik4vOZNBNnjzpIyoYHTweopWM0IDKPyDNMNRjrV_gaaN7XhVtEUz2KLPhPfZBqbexSz0YBEU7KdcnpvEmSIcOrHzrXXKSfhmrCpBvzkzCZYXnsoLYeSPxSw"
 var url1 = "https://bluebank.azure-api.net/api/v0.7/";
 var accountID = "0361d0ec-959f-4ce3-970c-a05a77a2609c";
 var customerID = "49172283-ca95-4f1c-8bb5-f7a25d4606ec";
@@ -96,14 +96,32 @@ var urlGetCustomer = url1+"customers";
 var urlGetCustomerID = urlGetCustomer+"/"+customerID;
 var urlGetAllAccounts= urlGetCustomerID +"/accounts";
 
+var urlRemoteGetCustomer ="http://167.99.195.166:8080/api/getCustomer";
+var urlRemoteGetAccount ="http://167.99.195.166:8080/api/getAccount";
+var urlRemoteTransactionData ="http://167.99.195.166:8080/api/getTransactionData";
+var urlLocalGetCustomer ="http://localhost:8080/api/getCustomer";
+var urlLocalGetAccount ="http://localhost:8080/api/getAccount";
+var urlLocalTransactionData ="http://localhost:8080/api/getTransactionData";
 
+function callTransations() {
+getRemoteTransactionsAPI(urlLocalTransactionData);
+     getRemoteTransactionsAPI(urlRemoteTransactionData);
+}
 
 
 function showMyOffer() {
     // getAccountDetails(urlGetAccountDetails); 
      //getCustomerDetails(urlGetCustomerID);  
-     getTransactionDetails(); 
-     //getAllAccounts();     
+     //getTransactionDetails(); 
+     //getAllAccounts();   
+     getRemoteCustomerAPI(urlLocalGetCustomer);  
+     getRemoteAccountAPI(urlLocalGetAccount) ;
+    
+     getRemoteCustomerAPI(urlRemoteGetCustomer);  
+     getRemoteAccountAPI(urlRemoteGetAccount) ;
+      
+
+
 }
 
 function getAccountDetails(url) {
@@ -160,6 +178,51 @@ $.ajax({
 
 
                                                 })
+}
+
+function getRemoteCustomerAPI(url) {
+              
+
+$.ajax({
+              url: url,beforeSend: function(){              
+                        },
+                        type: "GET",
+                        })
+                         .done(function(data) {
+                          console.log('get customer details via bluebank API'); 
+                         // $("#TestInput").append(data.address1);                                               
+                           console.log("Your address is: %s , %s , %s", data.address1 ,data.county ,data.postCode);
+                           })
+}
+
+function getRemoteAccountAPI(url) {
+              
+
+$.ajax({
+              url: url,beforeSend: function(){              
+                        },
+                        type: "GET",
+                        })
+                         .done(function(data) {
+                          console.log('get customer details via bluebank API'); 
+                         // $("#TestInput").append(data.address1);                                               
+                           console.log("Your Account details are is: %s ", data.accountType);
+                           })
+}
+
+function getRemoteTransactionsAPI(url) {
+              
+
+$.ajax({
+              url: url,beforeSend: function(){              
+                        },
+                        type: "GET",
+                        })
+                         .done(function(data) {
+                          console.log('get Transactions details via bluebank API'); 
+                         // $("#TestInput").append(data.address1);                                               
+                           console.log("Your Mortgate is with: %s ", data.mortgageProvider);
+                           })
 }
 
 function getTransactionDetails(){
